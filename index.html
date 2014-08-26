@@ -1,0 +1,54 @@
+<html>
+
+<head>
+    <title>Printing.On.The.Go.</title>
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0" />
+    <script src="bower_components\angular\angular.js"></script>
+    <script src="bower_components\ng-file-upload\angular-file-upload.js"></script>
+    <script src="app.js"></script>
+    <style>
+    .header {
+        height: 10em;
+        background-color: green;
+    }
+    .main {
+        padding: 2em;
+        margin: auto;
+        max-width: 920px;
+    }
+    .drop-zone {
+        margin-left: -2em;
+        padding: 2em;
+        margin: 2em;
+        height: 5em;
+        border: 1em dashed rgba(255, 0, 0, .5);
+    }
+    .drop-zone-hover {
+        opacity: 0.5;
+    }
+    </style>
+</head>
+
+<body ng-app="potg">
+    <div class="header">
+        Header
+    </div>
+    <div class="main" ng-controller="Main">
+        <h1>Printing.On.The.Go.</h1>
+        <div id="upload">
+            <header>Upload.</head er>
+                <div class="drop-zone" ng-file-drop="onFileSelect($files)" ng-click="openFileUploadDialog()" ng-file-drag-over-class="drop-zone-hover">
+                    drop files here
+                </div>
+        </div>
+        <div id="pay">
+            <header>Pay.</header>
+
+        </div>
+        <div id="print">
+            <header>Review.</header>
+        </div>
+    </div>
+</body>
+
+</html>
